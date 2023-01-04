@@ -1,0 +1,8 @@
+{
+  "slug": "token-bucket-limiter",
+  "title": "Token Bucket Limiter",
+  "description": "Model burst capacity and gradual token refill with a deterministic clock.",
+  "category": "backend",
+  "demo_args": [],
+  "expected_exit": 0
+}
