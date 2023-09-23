@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 3 of 16. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 4 of 16. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -15,7 +15,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 1 | 2023-01-04T17:31:29+05:30 | add repository metadata and Python ignore rules (present) |
 | 2 | 2023-03-29T10:34:51+05:30 | add module imports, constants, and scope documentation (present) |
 | 3 | 2023-06-19T13:44:42+05:30 | validate finite numeric inputs (present) |
-| 4 | 2023-09-23T13:29:06+05:30 | implement refill, weighted admission, and retry estimates (later stage) |
+| 4 | 2023-09-23T13:29:06+05:30 | implement refill, weighted admission, and retry estimates (present) |
 | 5 | 2023-10-04T17:22:51+05:30 | add the deterministic demonstration and command-line entry point (later stage) |
 | 6 | 2023-11-06T13:40:10+05:30 | test initial burst then denial (later stage) |
 | 7 | 2023-12-23T13:37:38+05:30 | test fractional refill and weight (later stage) |
