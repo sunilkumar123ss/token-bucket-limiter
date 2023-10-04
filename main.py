@@ -51,3 +51,18 @@ class TokenBucket:
         if amount > self.capacity or self.refill_rate == 0:
             return math.inf
         return (amount - available) / self.refill_rate
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.parse_args()
+    bucket = TokenBucket(capacity=3, refill_rate=1)
+    events = []
+    for timestamp in (0, 0, 0, 0, 0.5, 1, 5):
+        allowed = bucket.consume(timestamp)
+        events.append({"at": timestamp, "allowed": allowed, "remaining": bucket.tokens})
+    print(json.dumps(events, indent=2))
+
+
+if __name__ == "__main__":
+    main()
