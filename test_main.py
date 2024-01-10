@@ -16,6 +16,9 @@ class TokenBucketTests(unittest.TestCase):
         self.assertTrue(bucket.consume(3, 1.5))
         self.assertEqual(bucket.tokens, 0)
 
+    def test_refill_is_capped(self):
+        bucket = TokenBucket(2, 1, initial_tokens=0)
+        self.assertEqual(bucket.available(100), 2)
 
 
 
