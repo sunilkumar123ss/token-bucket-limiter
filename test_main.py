@@ -20,6 +20,11 @@ class TokenBucketTests(unittest.TestCase):
         bucket = TokenBucket(2, 1, initial_tokens=0)
         self.assertEqual(bucket.available(100), 2)
 
+    def test_denial_does_not_debit(self):
+        bucket = TokenBucket(3, 1, initial_tokens=1)
+        self.assertFalse(bucket.consume(0, 2))
+        self.assertEqual(bucket.tokens, 1)
+        self.assertEqual(bucket.retry_after(0, 2), 1)
 
 
 

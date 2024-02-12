@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 8 of 16. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 9 of 16. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -20,7 +20,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 6 | 2023-11-06T13:40:10+05:30 | test initial burst then denial (present) |
 | 7 | 2023-12-23T13:37:38+05:30 | test fractional refill and weight (present) |
 | 8 | 2024-01-10T10:32:54+05:30 | test refill is capped (present) |
-| 9 | 2024-02-12T10:58:55+05:30 | test denial does not debit (later stage) |
+| 9 | 2024-02-12T10:58:55+05:30 | test denial does not debit (present) |
 | 10 | 2024-12-30T15:01:52+05:30 | test impossible request (later stage) |
 | 11 | 2025-02-03T15:09:21+05:30 | test clock reversal rejected without mutation (later stage) |
 | 12 | 2025-07-25T19:10:36+05:30 | test invalid inputs (later stage) |
