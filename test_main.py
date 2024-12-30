@@ -26,6 +26,9 @@ class TokenBucketTests(unittest.TestCase):
         self.assertEqual(bucket.tokens, 1)
         self.assertEqual(bucket.retry_after(0, 2), 1)
 
+    def test_impossible_request(self):
+        self.assertTrue(math.isinf(TokenBucket(2, 1).retry_after(0, 3)))
+        self.assertTrue(math.isinf(TokenBucket(2, 0, initial_tokens=0).retry_after(0)))
 
 
 
