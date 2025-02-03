@@ -30,6 +30,11 @@ class TokenBucketTests(unittest.TestCase):
         self.assertTrue(math.isinf(TokenBucket(2, 1).retry_after(0, 3)))
         self.assertTrue(math.isinf(TokenBucket(2, 0, initial_tokens=0).retry_after(0)))
 
+    def test_clock_reversal_rejected_without_mutation(self):
+        bucket = TokenBucket(2, 1, now=4)
+        with self.assertRaises(ValueError):
+            bucket.consume(3)
+        self.assertEqual(bucket.available(4), 2)
 
 
 
