@@ -36,6 +36,13 @@ class TokenBucketTests(unittest.TestCase):
             bucket.consume(3)
         self.assertEqual(bucket.available(4), 2)
 
+    def test_invalid_inputs(self):
+        for capacity, rate in ((0, 1), (1, -1), (float('nan'), 1), (True, 1)):
+            with self.subTest(capacity=capacity, rate=rate), self.assertRaises(ValueError):
+                TokenBucket(capacity, rate)
+        for amount in (0, -1, float('inf')):
+            with self.subTest(amount=amount), self.assertRaises(ValueError):
+                TokenBucket(2, 1).consume(0, amount)
 
 
 if __name__ == '__main__':
